@@ -92,7 +92,7 @@ Maven
 MySQL
 👨‍💻 Author
 Md Afzal Java Developer
-
+```
 HotelBookingApp
 │
 ├── src
@@ -150,3 +150,4 @@ HotelBookingApp
 ├── pom.xml
 └── README.md
 
+```
