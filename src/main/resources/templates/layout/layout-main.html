@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout: Main</title>
+
+    <th:block th:insert="~{fragment/bootstrap :: bootstrap-css}"></th:block>
+    <th:block th:insert="~{fragment/bootstrap :: bootstrap-icons}"></th:block>
+    <th:block th:insert="~{fragment/jquery-ui :: jquery-ui-css}"></th:block>
+
+    <!-- 🔥 Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="d-flex flex-column vh-100"
+      style="background-image: url('/img/maldives-bg.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;">
+
+<!-- Navbar -->
+<th:block th:insert="~{fragment/navbar :: navbar}"></th:block>
+
+<!-- Page Content -->
+<div class="flex-grow-1 m-3">
+    <th:block layout:fragment="content"></th:block>
+</div>
+
+<!-- Footer -->
+<th:block th:insert="~{fragment/footer :: footer}"></th:block>
+
+<!-- Scripts -->
+<th:block th:insert="~{fragment/jquery :: jquery}"></th:block>
+<th:block th:insert="~{fragment/jquery-ui :: jquery-ui-js}"></th:block>
+<th:block th:insert="~{fragment/bootstrap :: bootstrap-js}"></th:block>
+<th:block layout:fragment="additional-scripts"></th:block>
+
+</body>
+</html>
